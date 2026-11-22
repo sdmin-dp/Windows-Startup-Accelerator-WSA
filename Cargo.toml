@@ -1,0 +1,18 @@
+[package]
+name = "wsa"
+version = "0.1.0"
+edition = "2021"
+authors = ["sdmin-dp"]
+description = "Windows Startup Accelerator - a blazing-fast, dependency-free TUI for triaging Windows startup apps"
+license = "MIT"
+repository = "https://github.com/sdmin-dp/Windows-Startup-Accelerator-WSA"
+readme = "README.md"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
